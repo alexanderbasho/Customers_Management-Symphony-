@@ -1,0 +1,19 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<h1>Διαχείρηση Δωματίων και Πελατών</h1>
+
+<table>
+	<tr>
+		<th>Roomnumber</th>
+		<th>Room ID</th>
+	</tr>
+	{%for a in apotelesmata %}
+	<tr>
+		<td>{{a.roomnumber}}</td>
+		<td>{{a.roomID}}</td>
+	</tr>
+	{% endfor %}
+</table>
+{% endblock %}

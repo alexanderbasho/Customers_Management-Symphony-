@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+<h1>Διαχείρηση Δωματίων και Πελατών</h1>
+
+<table>
+	<tr>
+		<th>Customer ID</th>
+		<th>Firstname</th>
+		<th>Lastname</th>
+		<th>Address</th>
+		<th>City</th>
+		<th>State</th>
+		<th>Zip Code</th>
+	</tr>
+	{%for i in results %}
+	<tr>
+		<td>{{i.customerID}}</td>
+		<td>{{i.firstname}}</td>
+		<td>{{i.lastname}}</td>
+		<td>{{i.address}}</td>
+		<td>{{i.city}}</td>
+		<td>{{i.state}}</td>
+		<td>{{i.zip}}</td>
+	</tr>
+	{% endfor %}
+</table>
+
+{% endblock %}
